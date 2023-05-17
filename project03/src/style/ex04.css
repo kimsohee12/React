@@ -1,0 +1,23 @@
+/* container
+btn-container
+board-container
+board-item */
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.board-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.board-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
