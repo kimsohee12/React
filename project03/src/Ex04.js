@@ -32,40 +32,41 @@ const Ex04 = () => {
     let path ='./img/dice'
     let num1 =0;
     let num2 =0;
-    
-    const [myDice, setmyDice] = useState(0) //주사위 숫자
-    const [comDice, setcomDice] = useState(0) //주사위 숫자
+  
     const [comScore, setComScore] = useState(0);
     const [myScore, setmyScore]=useState(0)// 점수
     const [myPath, setmyPath]=useState(path +'1.png')// 점수
     const [comPath, setcomPath]=useState(path + '1.png')// 점수
-    
-
-    const start = ()=>{
-        num1=Math.floor(Math.random() * 6) + 1;
-        setmyPath(path + num1 + '.png')
-        num2=Math.floor(Math.random() * 6) + 1;
-        setcomPath(path + num2 + '.png')
-        
-        if(num1>num2){
-            setmyScore(myScore+1);
-           
-        }else{
-            setComScore(comScore+1);
-            
-        }
-           console.log(num1 , num2);
+    const makeRandom =()=>{
+        return Math.floor(Math.random() * 6) + 1
     }
 
-    //리셋버튼
+    const start = ()=>{
+        num1=makeRandom();
+        setmyPath(path + num1 + '.png')
+        num2=makeRandom();
+        setcomPath(path + num2 + '.png')
+        console.log(myScore,comScore);
+        if(myScore<=4&&comScore <=4){
+            if(num1>num2){
+                setmyScore(myScore+1);
+            }else {
+                setComScore(comScore+1);    
+            }
+        }else {
+            let result =myScore>comScore ? '당신의 승리입니다!':'당신의 패배입니다! '
+           alert(result)
+           reset()
+        }
+    }
+
+    //리셋버튼??????????????
     const reset=()=> {
         setmyScore(0);
         setComScore(0);
         setmyPath(path +'1.png')
         setcomPath(path +'1.png')
-        
-      }
-    
+      }   
     
   return (
 
@@ -79,12 +80,9 @@ const Ex04 = () => {
         <div className='board-container'>
             <Board name = "나" path={myPath} score ={myScore}/>
             <Board name = "컴퓨터" path={comPath} score ={comScore}/>
-            {myScore ===5 && myScore(5) && alert("당신의 승리입니다!")}
-            {comScore ===5 && comScore(5) && alert("당신의 패배입니다!")}
-            {myScore === 5 || comScore === 5 && reset()}
+           
         </div>
     </div>
-    
 
   )
 }
