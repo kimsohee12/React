@@ -41,6 +41,14 @@ const Ex04 = () => {
         return Math.floor(Math.random() * 6) + 1
     }
 
+    //리셋버튼 
+    const reset=()=> {
+        setmyScore(0);
+        setComScore(0);
+        setmyPath(path +'1.png')
+        setcomPath(path +'1.png')
+      }   
+
     const start = ()=>{
         num1=makeRandom();
         setmyPath(path + num1 + '.png')
@@ -60,13 +68,7 @@ const Ex04 = () => {
         }
     }
 
-    //리셋버튼??????????????
-    const reset=()=> {
-        setmyScore(0);
-        setComScore(0);
-        setmyPath(path +'1.png')
-        setcomPath(path +'1.png')
-      }   
+   
     
   return (
 
