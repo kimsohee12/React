@@ -8,8 +8,8 @@ import { TodoContext } from '../context/Ex04TodoContext'
         
         return (
             <div>
-        <input type ="checkbox" id ="todo-item" onChange={()=>{handleTodoToggle(index)}}></input>
-        <label htmlFor = "todo-item"
+        <input type ="checkbox" id ="todo-item"  onChange={()=>{handleTodoToggle(index)}}></input>
+        <label
                 style={{
                     textDecoration : todo.completed ? "line-through" : "none"
                     }}>{todo.text}</label> {"  "}

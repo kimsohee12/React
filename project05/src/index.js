@@ -10,7 +10,14 @@ import './index.css';
 //3.Context 실습 -다크모드 만들기
 //import App from './Ex03';
 //4. mini 프로젝트 -Todo List 만들기
-import App from './Ex04';
+//import App from './Ex04';
+//5.useRef 예제 -도형크기 변경시키기
+//import App from './Ex05';
+//5.useRef 실습 -pdf 변경시키기
+//import App from './Ex06';
+//5.useRef 실습 -사진 변경 &focus
+import App from './Ex07';
+
 
 import reportWebVitals from './reportWebVitals';
 

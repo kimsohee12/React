@@ -5,10 +5,7 @@ import { TodoContext } from './context/Ex04TodoContext'
 
 const Ex04 = () => {
 
-  const [todos,setTodos] = useState([
-        {text : 'React 복습하기',completed : false},
-        {text : 'Spring 복습하기',completed : false}
-    ]);
+  const [todos,setTodos] = useState([]);
 
   const [newTodo,setNewTodo]=useState("");
 
@@ -46,9 +43,10 @@ const Ex04 = () => {
         }>
     <div>
         <h1>Todo List</h1>
-        
+        <hr></hr>
         <Ex04List/>
         <Ex04AddTodo/>
+        <hr></hr>
     </div>
     </TodoContext.Provider>
   )

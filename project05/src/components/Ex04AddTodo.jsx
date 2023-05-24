@@ -7,7 +7,7 @@ const Ex04AddTodo = () => {
     
   return (
     <div>
-        <input type ="text" onChange={handleNewTodo} value ={newTodo}/>
+        <input type ="text" placeholder="할일을 입력하세요" onChange={handleNewTodo} value ={newTodo}/>
         <button onClick={handleTodoAddition}>추가</button>
       
 
