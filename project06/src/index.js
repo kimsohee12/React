@@ -5,7 +5,15 @@ import './index.css';
 //1. class Component
 //import App from './Ex01';
 //2.Function Component -useEffect
-import App from './Ex02';
+//import App from './Ex02';
+
+//useStae, useEffect 복습 -참참참
+//import App from './Ex03';
+//useEffect를 통해 영화 open API가져오기 (Fetch, Axios)
+//import App from './Ex04';
+//useEffect를 통해 날씨 API가져오기 (Fetch, Axios)
+import App from './Ex05';
+
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
