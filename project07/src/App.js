@@ -30,10 +30,10 @@ function App() {
  /*미션 수행 순서
   1)  Route 처리
   -BrowserRouter, Routes,Route,...etc
-  -inport export
+  -import export
   
   2)  App.js 에 list state 관리 해주기
-  - tip ! 함수 또한 prps로 보낼수 있다는것을 명심
+  - tip ! 함수 또한 props로 보낼수 있다는것을 명심
   ex) const[list,setList] = useState([])
   ...
   <Main List = {list} setList={setList}/>

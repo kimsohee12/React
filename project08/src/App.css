@@ -4,9 +4,15 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: 'KCCChassam';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCChassam.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 *{
-  font-family: 'Pretendard-Regular';
+  font-family: 'KCCChassam';
 }
 
 .container{
@@ -20,7 +26,7 @@
   align-items: center;  
 }
 .header-container{
-  background-color: lightgray;
+  background-color: rgb(254, 205, 89);
   height: 10%;
   justify-content: space-between;
 }
@@ -31,7 +37,7 @@
 }
 
 .footer-container{
-  background-color: lightgray;
+  background-color: rgb(254, 205, 89);
   height: 10%;
   justify-content: center;
 }
@@ -52,6 +58,7 @@
   margin: 5%;
   color: black;
   text-decoration: none;
+ 
 }
 
 .list-container{
@@ -74,7 +81,7 @@
 
 .product-container{
   margin: 10px;
-  border: 3px solid lightgray;
+  border: 3px solid rgb(232, 196, 36);
   border-radius: 20px;
   height: 50%;
 
@@ -86,4 +93,11 @@
   padding: 3%;
   box-sizing: border-box;
   overflow: hidden;
+  cursor: pointer;
+ 
+  
+}
+.product-container:hover{
+ transform: scale(1.1);
+  z-index: 1;
 }
