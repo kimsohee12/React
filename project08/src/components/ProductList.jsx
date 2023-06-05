@@ -10,14 +10,25 @@ const ProductList = ({list,setList}) => {
     =>  map  함수, props처리 ( index 값도 )
  */
   
-  useEffect(()=>{
-    axios.get('/bestList.json').then((res)=>setList(res.data.list))
-    
-  },[] )
+    const getProductDetail=async()=>{
+      let url =`http://localhost:3000/bestList.json`
+      let res = await axios.get(url)
+      // let data = await response.json();
+      setList(res.data.list)
+    }
+  
+    useEffect(()=>{
+     getProductDetail()
+    },[])
+  // useEffect(()=>{
+  //   axios.get('/bestList.json').then((res)=>setList(res.data.list))
+  //   //axios 로  가져와 졌다면 그 다음에 then 을 실행
+  // },[] )
+  // res-> response
 
   return (
     <div className='list-container'>
-      {list.map((item)=>(<ProductItem item={item}index={item.no}/> ))}
+      {list.map((item)=>(<ProductItem key = {item.no} item={item}index={item.no}/> ))}
 
     </div>
   )
